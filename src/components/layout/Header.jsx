@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PiggyBank } from 'lucide-react';
+import { PiggyBank, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/use-toast';
 
 const Header = () => {
-  const handleActionClick = () => {
-    toast({
-      title: "¡Acción no implementada!",
-      description: "🚧 Esta función aún no está implementada—¡pero no te preocupes! ¡Puedes solicitarla en tu próximo mensaje! 🚀",
-    });
+  // URL de la intranet
+  const intranetUrl = "https://grupokaufmann.sharepoint.com/sites/IntranetDivemotorColombia/Mis-Beneficios/Paginas/Cooperativa-Divemotor.aspx";
+
+  const handleSociosClick = () => {
+    // Abre la intranet en una nueva pestaña
+    window.open(intranetUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -42,10 +42,11 @@ const Header = () => {
           </div>
           
           <Button
-            onClick={handleActionClick}
-            className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={handleSociosClick}
+            className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
           >
             Área de Socios
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Button>
         </div>
       </nav>

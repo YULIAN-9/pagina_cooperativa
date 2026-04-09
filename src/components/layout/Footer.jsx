@@ -43,9 +43,9 @@ const Footer = () => {
           <div>
             <span className="text-white font-semibold mb-4 block">Contacto</span>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>+1 (555) 987-6543</li>
+              <li>+57 (313)6294045</li>
               <li>contacto@empresacoop.com</li>
-              <li>Av. Financiera 456, Ciudad</li>
+              <li>Bogotá, D.C.</li>
             </ul>
           </div>
         </div>
